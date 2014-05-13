@@ -1,16 +1,21 @@
-.. RobusTest documentation master file, created by
-   sphinx-quickstart on Fri May 09 23:58:11 2014.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+********************
+Selenium with Python
+********************
 
-Welcome to RobusTest's documentation!
-=====================================
+:Author: `Baiju Muthukadan <http://muthukadan.net>`_
+:License: This document is licensed under a
+  `Creative Commons Attribution-ShareAlike 4.0 International License <http://creativecommons.org/licenses/by-sa/4.0/>`_.
 
-Contents:
+.. note::
+
+   This is not an official documentation.  Official API documentation
+   is available `here
+   <http://selenium.googlecode.com/svn/trunk/docs/api/py/index.html>`_.
 
 .. toctree::
-   :maxdepth: 2
+   :numbered:
 
+   selenium
 
 
 Indices and tables
@@ -19,4 +24,3 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-

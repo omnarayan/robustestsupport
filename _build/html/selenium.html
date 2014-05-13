@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>1. Selenium &mdash; Selenium Python Bindings 2 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Selenium Python Bindings 2 documentation" href="index.html" />
+    <link rel="next" title="1. Installation" href="installation.html" />
+    <link rel="prev" title="Selenium with Python" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="installation.html" title="1. Installation"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Selenium with Python"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Selenium Python Bindings 2 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="selenium">
+<span id="id1"></span><h1>1. Selenium<a class="headerlink" href="#selenium" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">1. Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#introduction">1.1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#downloading-python-bindings-for-selenium">1.2. Downloading Python bindings for Selenium</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#detailed-instructions-for-windows-users">1.3. Detailed instructions for Windows users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#downloading-selenium-server">1.4. Downloading Selenium server</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="getting-started.html">2. Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="getting-started.html#simple-usage">2.1. Simple Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting-started.html#walk-through-of-the-example">2.2. Walk through of the example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting-started.html#using-selenium-to-write-tests">2.3. Using Selenium to write tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting-started.html#id2">2.4. Walk through of the example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting-started.html#using-selenium-with-remote-webdriver">2.5. Using Selenium with remote WebDriver</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="navigating.html">3. Navigating</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="navigating.html#interacting-with-the-page">3.1. Interacting with the page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navigating.html#filling-in-forms">3.2. Filling in forms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navigating.html#drag-and-drop">3.3. Drag and drop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navigating.html#moving-between-windows-and-frames">3.4. Moving between windows and frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navigating.html#popup-dialogs">3.5. Popup dialogs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navigating.html#navigation-history-and-location">3.6. Navigation: history and location</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navigating.html#cookies">3.7. Cookies</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="locating-elements.html">4. Locating Elements</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="locating-elements.html#locating-by-id">4.1. Locating by Id</a></li>
+<li class="toctree-l2"><a class="reference internal" href="locating-elements.html#locating-by-name">4.2. Locating by Name</a></li>
+<li class="toctree-l2"><a class="reference internal" href="locating-elements.html#locating-by-xpath">4.3. Locating by XPath</a></li>
+<li class="toctree-l2"><a class="reference internal" href="locating-elements.html#locating-hyperlinks-by-link-text">4.4. Locating Hyperlinks by Link Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="locating-elements.html#locating-elements-by-tag-name">4.5. Locating Elements by Tag Name</a></li>
+<li class="toctree-l2"><a class="reference internal" href="locating-elements.html#locating-elements-by-class-name">4.6. Locating Elements by Class Name</a></li>
+<li class="toctree-l2"><a class="reference internal" href="locating-elements.html#locating-elements-by-css-selectors">4.7. Locating Elements by CSS Selectors</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="waits.html">5. Waits</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="waits.html#explicit-waits">5.1. Explicit Waits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waits.html#implicit-waits">5.2. Implicit Waits</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">6. WebDriver API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api.html#exceptions">6.1. Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#action-chains">6.2. Action Chains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#alerts">6.3. Alerts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#special-keys">6.4. Special Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#firefox-webdriver">6.5. Firefox WebDriver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#chrome-webdriver">6.6. Chrome WebDriver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#remote-webdriver">6.7. Remote WebDriver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#webelement">6.8. WebElement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#ui-support">6.9. UI Support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#color-support">6.10. Color Support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#expected-conditions-support">6.11. Expected conditions Support</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">7. Appendix: Frequently Asked Questions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#how-to-use-chromedriver">7.1. How to use ChromeDriver ?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#does-selenium-2-support-xpath-2-0">7.2. Does Selenium 2 support XPath 2.0 ?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#how-to-scroll-down-to-the-bottom-of-a-page">7.3. How to scroll down to the bottom of a page ?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#how-to-auto-save-files-using-custom-firefox-profile">7.4. How to auto save files using custom Firefox profile ?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#how-to-use-firebug-with-firefox">7.5. How to use firebug with Firefox ?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#how-to-take-screenshot-of-the-current-window">7.6. How to take screenshot of the current window ?</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Selenium with Python</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="installation.html"
+                        title="next chapter">1. Installation</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/selenium.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="installation.html" title="1. Installation"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Selenium with Python"
+             >previous</a> |</li>
+        <li><a href="index.html">Selenium Python Bindings 2 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2011-2014, Baiju Muthukadan.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

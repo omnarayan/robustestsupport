@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>6. WebDriver API &mdash; Selenium Python Bindings 2 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Selenium Python Bindings 2 documentation" href="index.html" />
+    <link rel="up" title="1. Selenium" href="selenium.html" />
+    <link rel="next" title="7. Appendix: Frequently Asked Questions" href="faq.html" />
+    <link rel="prev" title="5. Waits" href="waits.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="faq.html" title="7. Appendix: Frequently Asked Questions"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="waits.html" title="5. Waits"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Selenium Python Bindings 2 documentation</a> &raquo;</li>
+          <li><a href="selenium.html" accesskey="U">1. Selenium</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="webdriver-api">
+<span id="api"></span><h1>6. WebDriver API<a class="headerlink" href="#webdriver-api" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This is not an official documentation.  Official API documentation
+is available <a class="reference external" href="http://selenium.googlecode.com/svn/trunk/docs/api/py/index.html">here</a>.</p>
+</div>
+<p>This chapter cover all the interfaces of Selenium WebDriver.</p>
+<p><strong>Recommended Import Style</strong></p>
+<p>The API definitions in this chapter shows the absolute location of classes.
+However the recommended import style is as given below:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
+</pre></div>
+</div>
+<p>Then, you can access the classes like this:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">webdriver</span><span class="o">.</span><span class="n">Firefox</span>
+<span class="n">webdriver</span><span class="o">.</span><span class="n">FirefoxProfile</span>
+<span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span>
+<span class="n">webdriver</span><span class="o">.</span><span class="n">ChromeOptions</span>
+<span class="n">webdriver</span><span class="o">.</span><span class="n">Ie</span>
+<span class="n">webdriver</span><span class="o">.</span><span class="n">Opera</span>
+<span class="n">webdriver</span><span class="o">.</span><span class="n">PhantomJS</span>
+<span class="n">webdriver</span><span class="o">.</span><span class="n">Remote</span>
+<span class="n">webdriver</span><span class="o">.</span><span class="n">DesiredCapabilities</span>
+<span class="n">webdriver</span><span class="o">.</span><span class="n">ActionChains</span>
+<span class="n">webdriver</span><span class="o">.</span><span class="n">TouchActions</span>
+<span class="n">webdriver</span><span class="o">.</span><span class="n">Proxy</span>
+</pre></div>
+</div>
+<p>The special keys class (<tt class="docutils literal"><span class="pre">Keys</span></tt>) can be imported like this:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">selenium.webdriver.common.keys</span> <span class="kn">import</span> <span class="n">Keys</span>
+</pre></div>
+</div>
+<p>The exception classes can be imported like this (Replace the <tt class="docutils literal"><span class="pre">TheNameOfTheExceptionClass</span></tt> with actual class name given below):</p>
+<div class="highlight-python"><div class="highlight"><pre>from selenium.common.exceptions import [TheNameOfTheExceptionClass]
+</pre></div>
+</div>
+<p><strong>Conventions used in the API</strong></p>
+<p>Some attributes are callable (or methods) and others are non-callable
+(properties).  All the callable attributes are ending with round
+brackets.</p>
+<p>Here is an example for property:</p>
+<blockquote>
+<div><ul>
+<li><p class="first">current_url</p>
+<p>URL of the current loaded page.</p>
+<p>Usage:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">driver</span><span class="o">.</span><span class="n">current_url</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+<p>Here is an example for a method:</p>
+<blockquote>
+<div><ul>
+<li><p class="first">close()</p>
+<p>Closes the current window.</p>
+<p>Usage:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">driver</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+<div class="section" id="exceptions">
+<h2>6.1. Exceptions<a class="headerlink" href="#exceptions" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="action-chains">
+<h2>6.2. Action Chains<a class="headerlink" href="#action-chains" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="alerts">
+<h2>6.3. Alerts<a class="headerlink" href="#alerts" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="special-keys">
+<h2>6.4. Special Keys<a class="headerlink" href="#special-keys" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="firefox-webdriver">
+<h2>6.5. Firefox WebDriver<a class="headerlink" href="#firefox-webdriver" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="chrome-webdriver">
+<h2>6.6. Chrome WebDriver<a class="headerlink" href="#chrome-webdriver" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="remote-webdriver">
+<h2>6.7. Remote WebDriver<a class="headerlink" href="#remote-webdriver" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="webelement">
+<h2>6.8. WebElement<a class="headerlink" href="#webelement" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="ui-support">
+<h2>6.9. UI Support<a class="headerlink" href="#ui-support" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="color-support">
+<h2>6.10. Color Support<a class="headerlink" href="#color-support" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="expected-conditions-support">
+<h2>6.11. Expected conditions Support<a class="headerlink" href="#expected-conditions-support" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">6. WebDriver API</a><ul>
+<li><a class="reference internal" href="#exceptions">6.1. Exceptions</a></li>
+<li><a class="reference internal" href="#action-chains">6.2. Action Chains</a></li>
+<li><a class="reference internal" href="#alerts">6.3. Alerts</a></li>
+<li><a class="reference internal" href="#special-keys">6.4. Special Keys</a></li>
+<li><a class="reference internal" href="#firefox-webdriver">6.5. Firefox WebDriver</a></li>
+<li><a class="reference internal" href="#chrome-webdriver">6.6. Chrome WebDriver</a></li>
+<li><a class="reference internal" href="#remote-webdriver">6.7. Remote WebDriver</a></li>
+<li><a class="reference internal" href="#webelement">6.8. WebElement</a></li>
+<li><a class="reference internal" href="#ui-support">6.9. UI Support</a></li>
+<li><a class="reference internal" href="#color-support">6.10. Color Support</a></li>
+<li><a class="reference internal" href="#expected-conditions-support">6.11. Expected conditions Support</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="waits.html"
+                        title="previous chapter">5. Waits</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="faq.html"
+                        title="next chapter">7. Appendix: Frequently Asked Questions</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/api.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="faq.html" title="7. Appendix: Frequently Asked Questions"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="waits.html" title="5. Waits"
+             >previous</a> |</li>
+        <li><a href="index.html">Selenium Python Bindings 2 documentation</a> &raquo;</li>
+          <li><a href="selenium.html" >1. Selenium</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2011-2014, Baiju Muthukadan.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>
