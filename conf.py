@@ -40,8 +40,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Selenium Python Bindings'
-copyright = u'2011-2014, Baiju Muthukadan'
+project = u'RobusTest Support'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -110,12 +109,12 @@ html_theme = 'default'
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-#html_logo = None
+html_logo = 'img/RobusTest.png'
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
 # pixels large.
-#html_favicon = None
+html_favicon = 'img/favicon.ico'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -164,7 +163,7 @@ html_static_path = ['_static']
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'SeleniumPythonBindings'
+htmlhelp_basename = 'RobusTest'
 
 
 # -- Options for LaTeX output --------------------------------------------------
@@ -178,13 +177,13 @@ htmlhelp_basename = 'SeleniumPythonBindings'
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'SeleniumPythonBindings.tex', u'Selenium Python Bindings',
-   u'Baiju Muthukadan', 'manual'),
+  ('index', 'RobusTest.tex', u'RobusTest',
+   u'RobusTest', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
-#latex_logo = None
+latex_logo = 'img/RobusTest.png'
 
 # For "manual" documents, if this is true, then toplevel headings are parts,
 # not chapters.
@@ -219,10 +218,8 @@ man_pages = [
 # -- Options for Epub output ---------------------------------------------------
 
 # Bibliographic Dublin Core info.
-epub_title = u'Selenium Python Bindings'
-epub_author = u'Baiju Muthukadan'
-epub_publisher = u'Baiju Muthukadan'
-epub_copyright = u'2011-2014, Baiju Muthukadan'
+epub_title = u'RobusTest Support'
+
 
 # The language of the text. It defaults to the language option
 # or en if the language is not set.

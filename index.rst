@@ -16,4 +16,5 @@ Indices and tables
 * :ref:`search`
 
 `Robustest - One Click Automation <http://www.robustest.com?oneclickAutomation/>`_
+
 `Robustest - Contextual Bug Reporting   <http://www.robustest.com?ContextualBugReporting/>`_
