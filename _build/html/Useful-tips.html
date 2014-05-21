@@ -1,0 +1,166 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>1.4.7. Useful tips &mdash; RobusTest Support v2 documentation</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="RobusTest Support v2 documentation" href="index.html" />
+    <link rel="up" title="1. Welcome to RITE documentation!" href="RITE.html" />
+    <link rel="next" title="1.4.8. Examples" href="Examples.html" />
+    <link rel="prev" title="1.4.6. Xpath finder" href="Xpath-finder.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="Examples.html" title="1.4.8. Examples"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="Xpath-finder.html" title="1.4.6. Xpath finder"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">RobusTest Support v2 documentation</a> &raquo;</li>
+          <li><a href="RITE.html" accesskey="U">1. Welcome to RITE documentation!</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="useful-tips">
+<h1>1.4.7. Useful tips<a class="headerlink" href="#useful-tips" title="Permalink to this headline">¶</a></h1>
+<p><strong>Main console</strong></p>
+<ul class="simple">
+<li>Double click on a generated command like click(...), verify(...) will open the Details   dialog.</li>
+<li>Ctrl + Alt +s to switch the generated script to readable mode and switch back.</li>
+</ul>
+<p><strong>Record</strong></p>
+<ul class="simple">
+<li>To change the tab under record, click the RITE option in extension popup again. To check if the new tab is selected correctly, you could enter record mode and see if the new tab is popped up to the front and ready to record.</li>
+<li>To record an action like verify, verify not, and mouseover, try right clicking on the target element. In the popped up dialog in console, select the correct action and save the command.</li>
+<li>Always keep an eye on the generated code during recording. Most of the time, it should be obvious to understand the syntax. When there is a URL redirection happens, it should generate a redirectTo command following the original action command.</li>
+<li>Make sure the page is properly loaded and the dom element is yellow highlighted before performing actions, otherwise, it might miss recording the step.</li>
+<li>To turn the Xpath finder on, you&#8217;ll need to check the option &#8220;Use Xpath&#8221; in the settings dialog which could be opened by clicking the settings button in the RITE menu bar.</li>
+<li>During recording, if a new tab is opened after clicking a link, you are still able to record in the original tab but the new tab.</li>
+<li>Due to an <a class="reference external" href="https://code.google.com/p/chromium/issues/detail?id=76429">extension bug</a>, RITE couldn&#8217;t perform well in case of dynamically created iframes. For example, Gmail or the Google+ sharebox. As a workaround, it&#8217;s possible to write up JS functions to simulate the behaviors.</li>
+</ul>
+<p><strong>Playback</strong></p>
+<ul class="simple">
+<li>To run a whole project or any number of scripts within a project, you&#8217;ll need to load the project first, and select the script names in the playback runtime dialog and play. In the end, it will show the links to view the results.</li>
+<li>You could cancel the whole run of multiple tests by clicking the X button in the playback runtime dialog. It only appears when you are running multiple tests.</li>
+<li>Try the stop button in playback runtime dialog to clear any playback status in case anything gets stuck.</li>
+</ul>
+<p><strong>Code</strong></p>
+<ul>
+<li><dl class="first docutils">
+<dt>The commonly generated commands are the followings:</dt>
+<dd><ul class="first last simple">
+<li>click(Element)  / dblclick(Element) / ...</li>
+<li>type(Element, Variable) / select(Element, Variable) / verify(Element, Variable) /...</li>
+<li>redirectTo(URL)</li>
+<li>call(Custom Function)</li>
+<li>changeUrl(URL), which could be manually typed in editor to perform a redirection.</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p><strong>Xpath finder</strong></p>
+<ul class="simple">
+<li>&#8220;Shift&#8221; to pause/resume the content changing in Xpath finder.</li>
+<li>Turn on/off the checkboxes to customize the xpath.</li>
+</ul>
+<p><strong>Comments</strong></p>
+<blockquote>
+<div>You do not have permission to add comments.</div></blockquote>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/RobusTest.png" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="Xpath-finder.html"
+                        title="previous chapter">1.4.6. Xpath finder</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="Examples.html"
+                        title="next chapter">1.4.8. Examples</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/Useful-tips.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="Examples.html" title="1.4.8. Examples"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="Xpath-finder.html" title="1.4.6. Xpath finder"
+             >previous</a> |</li>
+        <li><a href="index.html">RobusTest Support v2 documentation</a> &raquo;</li>
+          <li><a href="RITE.html" >1. Welcome to RITE documentation!</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright .
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

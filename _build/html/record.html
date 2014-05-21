@@ -1,0 +1,172 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>1.2.2. Record &mdash; RobusTest Support v2 documentation</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="RobusTest Support v2 documentation" href="index.html" />
+    <link rel="up" title="1. Welcome to RITE documentation!" href="RITE.html" />
+    <link rel="next" title="1.2.3. Playback" href="playback.html" />
+    <link rel="prev" title="1.2.1. Basics" href="Basics.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="playback.html" title="1.2.3. Playback"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="Basics.html" title="1.2.1. Basics"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">RobusTest Support v2 documentation</a> &raquo;</li>
+          <li><a href="RITE.html" accesskey="U">1. Welcome to RITE documentation!</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="record">
+<h1>1.2.2. Record<a class="headerlink" href="#record" title="Permalink to this headline">¶</a></h1>
+<p>Terms</p>
+<p>Tab under record: The tab which will be/is recorded.</p>
+<p>Select a tab to record</p>
+<ol class="arabic simple">
+<li>Navigate to the URL you&#8217;d like to record.</li>
+<li>Click the RITE browser icon on Chrome.</li>
+<li>Click the RITE option in the popup dialog.</li>
+</ol>
+<p>This will open the RITE main console, and also sets the selected tab as the tab under record. Note that it&#8217;s allowed to change the tab under record while the main console is opened.</p>
+<p>Start recording the tab</p>
+<p>Click the record button in the RITE main console. By design, the tab under record should be popped up to front and ready to record now. To check if it&#8217;s properly working, you could move your cursor in page, and find whether the dom elements are yellow highlighted.</p>
+<p>If not, there are several potential causes:</p>
+<ol class="arabic simple">
+<li>The tab was opened before installing the RITE extension. This is very likely to happen to the first time users. You could simply refresh the tab under record and check it again.</li>
+<li>The tab under record was accidentally closed. The solution is to select a new tab to be recorded.</li>
+<li>The URL doesn&#8217;t allow recording. For example:
+chrome://extensions/,</li>
+</ol>
+<p><a class="reference external" href="https://chrome.google.com/webstore/category/home">https://chrome.google.com/webstore/category/home</a>, and a few more.</p>
+<p><strong>How RITE recording works</strong></p>
+<p>RITE injects a content script in the tab under record which</p>
+<ul class="simple">
+<li>Adds event listeners to dom events including mousedown, mouseover, mouseout, change, submit, keydown, dlbclick, and mouseup.
+All of the listeners are registered on document object in capturing phase, which guarantees we could intercept the events on most of the sites.</li>
+<li>When an event is caught, the content script will send info back to the background page including action, element locating related info,  iframe info etc.</li>
+</ul>
+<p><strong>What are recorded?</strong></p>
+<ul class="simple">
+<li>The common actions while users are interacting with page, for example the clicks, types, selects, etc.</li>
+<li>The dom element&#8217;s information which is used to locate it while playback.</li>
+<li>The data inputs like a query.</li>
+<li>Other important actions like <a class="reference external" href="verification.html">verification</a>.</li>
+</ul>
+<p><strong>What are NOT recorded?</strong></p>
+<ul class="simple">
+<li>RITE can only record Dom level events/elements, that said, anything outside the target page can not be recorded. For example, the browser back button, address bar etc.</li>
+<li>Flash can not be recorded.</li>
+<li>The keyboard strokes are not recorded, for example, &#8220;Enter&#8221; key. This excludes the typings in input boxes.</li>
+<li>Mouse wheel, right mouse click can not be recorded.</li>
+<li>Complex scenarios, for example, elements within dynamically created iframes can not be recorded.</li>
+</ul>
+<p><strong>Limitation</strong></p>
+<blockquote>
+<div><p>RITE currently only supports recording one Chrome tab at a time.</p>
+<blockquote>
+<div><p><strong>Comments</strong></p>
+<blockquote>
+<div>You do not have permission to add commen</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/RobusTest.png" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="Basics.html"
+                        title="previous chapter">1.2.1. Basics</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="playback.html"
+                        title="next chapter">1.2.3. Playback</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/record.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="playback.html" title="1.2.3. Playback"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="Basics.html" title="1.2.1. Basics"
+             >previous</a> |</li>
+        <li><a href="index.html">RobusTest Support v2 documentation</a> &raquo;</li>
+          <li><a href="RITE.html" >1. Welcome to RITE documentation!</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright .
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

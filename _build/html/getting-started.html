@@ -1,19 +1,18 @@
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>2. Getting Started &mdash; RobusTest Support 2 documentation</title>
-    
+    <title>2. Getting Started &mdash; RobusTest Support v2 documentation</title>
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
+        URL_ROOT:    '',
         VERSION:     '2',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
@@ -24,8 +23,8 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
-    <link rel="top" title="RobusTest Support 2 documentation" href="index.html" />
-    <link rel="up" title="1. Selenium" href="selenium.html" />
+    <link rel="top" title="RobusTest Support v2 documentation" href="index.html" />
+    <link rel="up" title="3. Selenium" href="selenium.html" />
     <link rel="next" title="3. Navigating" href="navigating.html" />
     <link rel="prev" title="1. Installation" href="installation.html" /> 
   </head>
@@ -37,13 +36,16 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
           <a href="navigating.html" title="3. Navigating"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="installation.html" title="1. Installation"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">RobusTest Support 2 documentation</a> &raquo;</li>
-          <li><a href="selenium.html" accesskey="U">1. Selenium</a> &raquo;</li> 
+        <li><a href="index.html">RobusTest Support v2 documentation</a> &raquo;</li>
+          <li><a href="selenium.html" accesskey="U">3. Selenium</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -72,8 +74,7 @@ from Python like this.</p>
 </div>
 <p>The above script can be saved into a file (eg:-
 <cite>python_org_search.py</cite>), then it can be run like this:</p>
-<div class="highlight-python"><div class="highlight"><pre>python python_org_search.py
-</pre></div>
+<div class="highlight-python"><pre>python python_org_search.py</pre>
 </div>
 <p>The <cite>python</cite> which you are running should have the <cite>selenium</cite> module
 installed.</p>
@@ -163,13 +164,12 @@ for <cite>python.org</cite> search functionality:</p>
 </pre></div>
 </div>
 <p>You can run the above test case from a shell like this:</p>
-<div class="highlight-python"><div class="highlight"><pre>python test_python_org_search.py
+<div class="highlight-python"><pre>python test_python_org_search.py
 .
 ----------------------------------------------------------------------
 Ran 1 test in 15.566s
 
-OK
-</pre></div>
+OK</pre>
 </div>
 <p>The above results shows that, the test has been successfully
 completed.</p>
@@ -190,8 +190,7 @@ provide keys in the keyboard like RETURN, F1, ALT etc.</p>
 <p>The test case class is inherited from <cite>unittest.TestCase</cite>.
 Inheriting from <cite>TestCase</cite> class is the way to tell <cite>unittest</cite> module
 that, this is a test case:</p>
-<div class="highlight-python"><div class="highlight"><pre>class PythonOrgSearch(unittest.TestCase):
-</pre></div>
+<div class="highlight-python"><pre>class PythonOrgSearch(unittest.TestCase):</pre>
 </div>
 <p>The <cite>setUp</cite> is part of initialization, this method will get called
 before every test function which you are going to write in this test
@@ -257,13 +256,11 @@ will exit entirely.:</p>
 <span id="selenium-remote-webdriver"></span><h2>2.5. Using Selenium with remote WebDriver<a class="headerlink" href="#using-selenium-with-remote-webdriver" title="Permalink to this headline">¶</a></h2>
 <p>To use the remote WebDriver, you should have Selenium server running.
 To run the server, use this command:</p>
-<div class="highlight-python"><div class="highlight"><pre>java -jar selenium-server-standalone-2.x.x.jar
-</pre></div>
+<div class="highlight-python"><pre>java -jar selenium-server-standalone-2.x.x.jar</pre>
 </div>
 <p>While running the Selenium server, you could see a message looks like
 this:</p>
-<div class="highlight-python"><div class="highlight"><pre>15:43:07.541 INFO - RemoteWebDriver instances should connect to: http://127.0.0.1:4444/wd/hub
-</pre></div>
+<div class="highlight-python"><pre>15:43:07.541 INFO - RemoteWebDriver instances should connect to: http://127.0.0.1:4444/wd/hub</pre>
 </div>
 <p>The above line says that, you can use this URL for connecting to
 remote WebDriver.  Here are some examples:</p>
@@ -329,7 +326,7 @@ default dictionaries, you can specifies the values explicitly:</p>
 <div id="searchbox" style="display: none">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" size="18" />
       <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
@@ -350,18 +347,21 @@ default dictionaries, you can specifies the values explicitly:</p>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
           <a href="navigating.html" title="3. Navigating"
              >next</a> |</li>
         <li class="right" >
           <a href="installation.html" title="1. Installation"
              >previous</a> |</li>
-        <li><a href="index.html">RobusTest Support 2 documentation</a> &raquo;</li>
-          <li><a href="selenium.html" >1. Selenium</a> &raquo;</li> 
+        <li><a href="index.html">RobusTest Support v2 documentation</a> &raquo;</li>
+          <li><a href="selenium.html" >3. Selenium</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
         &copy; Copyright .
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
     </div>
   </body>
 </html>

@@ -1,19 +1,18 @@
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>1. Installation &mdash; RobusTest Support 2 documentation</title>
-    
+    <title>1. Installation &mdash; RobusTest Support v2 documentation</title>
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
+        URL_ROOT:    '',
         VERSION:     '2',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
@@ -24,10 +23,10 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
-    <link rel="top" title="RobusTest Support 2 documentation" href="index.html" />
-    <link rel="up" title="1. Selenium" href="selenium.html" />
+    <link rel="top" title="RobusTest Support v2 documentation" href="index.html" />
+    <link rel="up" title="3. Selenium" href="selenium.html" />
     <link rel="next" title="2. Getting Started" href="getting-started.html" />
-    <link rel="prev" title="1. Selenium" href="selenium.html" /> 
+    <link rel="prev" title="3. Selenium" href="selenium.html" /> 
   </head>
   <body>
     <div class="related">
@@ -37,13 +36,16 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
           <a href="getting-started.html" title="2. Getting Started"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="selenium.html" title="1. Selenium"
+          <a href="selenium.html" title="3. Selenium"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">RobusTest Support 2 documentation</a> &raquo;</li>
-          <li><a href="selenium.html" accesskey="U">1. Selenium</a> &raquo;</li> 
+        <li><a href="index.html">RobusTest Support v2 documentation</a> &raquo;</li>
+          <li><a href="selenium.html" accesskey="U">3. Selenium</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -75,8 +77,7 @@ a better approach would be to use
 install the selenium package.  Python 3.4 has pip available in the
 <a class="reference external" href="http://docs.python.org/3.4/installing/index.html">standard library</a>.
 Using <cite>pip</cite>, you can install selenium like this:</p>
-<div class="highlight-python"><div class="highlight"><pre>pip install selenium
-</pre></div>
+<div class="highlight-python"><pre>pip install selenium</pre>
 </div>
 <p>You may consider using <a class="reference external" href="http://www.virtualenv.org">virtualenv</a>
 to create isolated Python environments.  Python 3.4 has <a class="reference external" href="http://docs.python.org/3.4/using/scripts.html#scripts-pyvenv">pyvenv</a>
@@ -94,16 +95,14 @@ page</a>.</p>
 </li>
 <li><p class="first">Start a command prompt using the <tt class="docutils literal"><span class="pre">cmd.exe</span></tt> program and run the
 <tt class="docutils literal"><span class="pre">pip</span></tt> command as given below to install <cite>selenium</cite>.</p>
-<div class="highlight-python"><div class="highlight"><pre>C:\Python34\Scripts\pip.exe install selenium
-</pre></div>
+<div class="highlight-python"><pre>C:\Python34\Scripts\pip.exe install selenium</pre>
 </div>
 </li>
 </ol>
 <p>Now you can run your test scripts using Python.  For example,
 if you have created a Selenium based script and saved it inside
 <tt class="docutils literal"><span class="pre">C:\my_selenium_script.py</span></tt>, you can run it like this:</p>
-<div class="highlight-python"><div class="highlight"><pre>C:\Python34\python.exe C:\my_selenium_script.py
-</pre></div>
+<div class="highlight-python"><pre>C:\Python34\python.exe C:\my_selenium_script.py</pre>
 </div>
 </div>
 <div class="section" id="downloading-selenium-server">
@@ -128,8 +127,7 @@ If you are using a GNU/Linux system and have root access in your system,
 you can also use your operating system instructions to install JRE.</p>
 <p>If <cite>java</cite> command is available in the PATH (environment variable),
 you can start the Selenium server using this command:</p>
-<div class="highlight-python"><div class="highlight"><pre>java -jar selenium-server-standalone-2.x.x.jar
-</pre></div>
+<div class="highlight-python"><pre>java -jar selenium-server-standalone-2.x.x.jar</pre>
 </div>
 <p>Replace <cite>2.x.x</cite> with actual version of Selenium server you downloaded
 from the site.</p>
@@ -138,8 +136,7 @@ not available in the PATH (environment variable), you can type the
 relative or absolute path to the <cite>java</cite> command.  Similarly, you can
 provide relative or absolute path to Selenium server jar file.
 Then, the command will look something like this:</p>
-<div class="highlight-python"><div class="highlight"><pre>/path/to/java -jar /path/to/selenium-server-standalone-2.x.x.jar
-</pre></div>
+<div class="highlight-python"><pre>/path/to/java -jar /path/to/selenium-server-standalone-2.x.x.jar</pre>
 </div>
 </div>
 </div>
@@ -166,7 +163,7 @@ Then, the command will look something like this:</p>
 
   <h4>Previous topic</h4>
   <p class="topless"><a href="selenium.html"
-                        title="previous chapter">1. Selenium</a></p>
+                        title="previous chapter">3. Selenium</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="getting-started.html"
                         title="next chapter">2. Getting Started</a></p>
@@ -178,7 +175,7 @@ Then, the command will look something like this:</p>
 <div id="searchbox" style="display: none">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" size="18" />
       <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
@@ -199,18 +196,21 @@ Then, the command will look something like this:</p>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
           <a href="getting-started.html" title="2. Getting Started"
              >next</a> |</li>
         <li class="right" >
-          <a href="selenium.html" title="1. Selenium"
+          <a href="selenium.html" title="3. Selenium"
              >previous</a> |</li>
-        <li><a href="index.html">RobusTest Support 2 documentation</a> &raquo;</li>
-          <li><a href="selenium.html" >1. Selenium</a> &raquo;</li> 
+        <li><a href="index.html">RobusTest Support v2 documentation</a> &raquo;</li>
+          <li><a href="selenium.html" >3. Selenium</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
         &copy; Copyright .
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
     </div>
   </body>
 </html>

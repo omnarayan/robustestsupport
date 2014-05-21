@@ -5,6 +5,7 @@ Robustest- Support
 .. toctree::
    :numbered:
 
+   RITE
    selenium
 
 

@@ -1,0 +1,159 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>1.2.3. Playback &mdash; RobusTest Support v2 documentation</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="RobusTest Support v2 documentation" href="index.html" />
+    <link rel="up" title="1. RITE- RobusTest Integrated Testing Environment" href="RITE.html" />
+    <link rel="next" title="1.2.4. Save and load" href="save and load.html" />
+    <link rel="prev" title="1.2.2. Record" href="record.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="save and load.html" title="1.2.4. Save and load"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="record.html" title="1.2.2. Record"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">RobusTest Support v2 documentation</a> &raquo;</li>
+          <li><a href="RITE.html" accesskey="U">1. RITE- RobusTest Integrated Testing Environment</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="playback">
+<h1>1.2.3. Playback<a class="headerlink" href="#playback" title="Permalink to this headline">¶</a></h1>
+<p><strong>The prerequisites to playback</strong></p>
+<p>First of all, you would need either load an existing script or record something. In other words, you&#8217;d need to make sure there is some code in the RPF editor. During playback, RPF will execute the script line by line.</p>
+<p>How to start playback</p>
+<p>Click the playback button in the RPF menu bar. This will bring up a playback runtime dialog on top of the main console. If we simply click the play button, RPF will automatically:</p>
+<ul class="simple">
+<li>Opens a new tab and gets content script injected.</li>
+<li>Parses the script and forms a list of commands. (for example: click..., type.. etc.)</li>
+<li>Sends a request to content script listener to execute command by command in the tab.</li>
+<li>Receives the result and either retries it or continues with the next command.</li>
+<li>Returns either a pass or failure when done.</li>
+</ul>
+<p><strong>The playback runtime dialog</strong></p>
+<img alt="image/image4.png" src="image/image4.png" />
+<p>On the left side, it lists all of the script names of the current project. You could select one or more script to playback. Otherwise, if you don&#8217;t select any, it will playback the currently loaded script by default. Also, if you didn&#8217;t load any project yet, it won&#8217;t show the left side selector at all. While you playback a group of scripts, it will show you the current status like x out of y are completed, and you&#8217;ll have a choice to cancel the whole run by clicking the X cancel button.</p>
+<p>The right side panel is the main controller for playback a script. It&#8217;s obvious to understand the buttons which are: play, pause, step by step, and stop. It&#8217;s worth mentioning that you could also set a break point step in the input box. This is useful if you expect something will go wrong immediately after the step. If you encounter any issues during playback, you could always try the stop button to clear any status and continue to playback.</p>
+<p><strong>The failures</strong></p>
+<p>Normally there are two types of common failures during playback.</p>
+<p><em>URL redirection timeout</em></p>
+<p>This happens when an expected URL redirection takes too long (by default, greater than 40 secs). It could be caused by several reasons: 1. The element you&#8217;ve interacted with doesn&#8217;t go to the original URL any more. 2. The new URL takes too long until it finishes loading.</p>
+<p><em>Dom element couldn&#8217;t be located</em></p>
+<p>Since the fragility of web UI testing, once the dom elements are changed, it&#8217;s possible that we couldn&#8217;t locate the element anymore. Normally RITE retries to find the element for 6 secs by default until it reports the error.</p>
+<p><strong>How RITE handles the failures</strong></p>
+<p>This time, let&#8217;s play with the bold &#8220;verify this&#8221; text in our <a class="reference external" href="http://rpfserver.appspot.com/examples">example site</a> by:</p>
+<ol class="arabic simple">
+<li>Enter record mode.</li>
+<li>Right click on the &#8220;verify this&#8221; text.</li>
+<li>In the newly popped up dialog on RITE main console, let&#8217;s change the &#8220;verify this&#8221; to &#8220;verify&#8221; and change its corresponding option from &#8220;Optional&#8221; to &#8220;Must&#8221;, and finally hit Save to generate the command.</li>
+<li>Playback the script until it fails. Note that this failure was introduced when we made the change in step 3 to simulate a scenario that dom text changes.</li>
+</ol>
+<p>At this point, we should see the following options appeared in the playback runtime dialog.</p>
+<img alt="image/handlers.png" src="image/handlers.png" />
+<p>We could definitely choose &#8220;delete&#8221; to remove the line, but let&#8217;s try &#8220;Update&#8221; now.  Once clicked, the tab under playback should pop up to front and if you right click on the &#8220;verify this&#8221; text again, the original dom element will be replaced by the new element. In the end, you could playback the script again and it should pass now.</p>
+<blockquote>
+<div><p><strong>Comments</strong></p>
+<blockquote>
+<div>You do not have permission to add comments</div></blockquote>
+</div></blockquote>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/RobusTest.png" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="record.html"
+                        title="previous chapter">1.2.2. Record</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="save and load.html"
+                        title="next chapter">1.2.4. Save and load</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/playback.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="save and load.html" title="1.2.4. Save and load"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="record.html" title="1.2.2. Record"
+             >previous</a> |</li>
+        <li><a href="index.html">RobusTest Support v2 documentation</a> &raquo;</li>
+          <li><a href="RITE.html" >1. RITE- RobusTest Integrated Testing Environment</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright .
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

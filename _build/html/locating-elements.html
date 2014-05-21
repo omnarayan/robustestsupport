@@ -1,19 +1,18 @@
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>4. Locating Elements &mdash; RobusTest Support 2 documentation</title>
-    
+    <title>4. Locating Elements &mdash; RobusTest Support v2 documentation</title>
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
+        URL_ROOT:    '',
         VERSION:     '2',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
@@ -24,8 +23,8 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
-    <link rel="top" title="RobusTest Support 2 documentation" href="index.html" />
-    <link rel="up" title="1. Selenium" href="selenium.html" />
+    <link rel="top" title="RobusTest Support v2 documentation" href="index.html" />
+    <link rel="up" title="3. Selenium" href="selenium.html" />
     <link rel="next" title="5. Waits" href="waits.html" />
     <link rel="prev" title="3. Navigating" href="navigating.html" /> 
   </head>
@@ -37,13 +36,16 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
           <a href="waits.html" title="5. Waits"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="navigating.html" title="3. Navigating"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">RobusTest Support 2 documentation</a> &raquo;</li>
-          <li><a href="selenium.html" accesskey="U">1. Selenium</a> &raquo;</li> 
+        <li><a href="index.html">RobusTest Support v2 documentation</a> &raquo;</li>
+          <li><a href="selenium.html" accesskey="U">3. Selenium</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -84,16 +86,15 @@ strategy, the first element with the <cite>id</cite> attribute value matching th
 location will be returned.  If no element has a matching <cite>id</cite>
 attribute, a <tt class="docutils literal"><span class="pre">NoSuchElementException</span></tt> will be raised.</p>
 <p>For instance, conside this page source:</p>
-<div class="highlight-python"><div class="highlight"><pre>&lt;html&gt;
+<div class="highlight-python"><pre>&lt;html&gt;
  &lt;body&gt;
-  &lt;form id=&quot;loginForm&quot;&gt;
-   &lt;input name=&quot;username&quot; type=&quot;text&quot; /&gt;
-   &lt;input name=&quot;password&quot; type=&quot;password&quot; /&gt;
-   &lt;input name=&quot;continue&quot; type=&quot;submit&quot; value=&quot;Login&quot; /&gt;
+  &lt;form id="loginForm"&gt;
+   &lt;input name="username" type="text" /&gt;
+   &lt;input name="password" type="password" /&gt;
+   &lt;input name="continue" type="submit" value="Login" /&gt;
   &lt;/form&gt;
  &lt;/body&gt;
-&lt;html&gt;
-</pre></div>
+&lt;html&gt;</pre>
 </div>
 <p>The form element can be located like this:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">login_form</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_id</span><span class="p">(</span><span class="s">&#39;loginForm&#39;</span><span class="p">)</span>
@@ -107,17 +108,16 @@ strategy, the first element with the <cite>name</cite> attribute value matching
 the location will be returned.  If no element has a matching <cite>name</cite>
 attribute, a <tt class="docutils literal"><span class="pre">NoSuchElementException</span></tt> will be raised.</p>
 <p>For instance, conside this page source:</p>
-<div class="highlight-python"><div class="highlight"><pre>&lt;html&gt;
+<div class="highlight-python"><pre>&lt;html&gt;
  &lt;body&gt;
-  &lt;form id=&quot;loginForm&quot;&gt;
-   &lt;input name=&quot;username&quot; type=&quot;text&quot; /&gt;
-   &lt;input name=&quot;password&quot; type=&quot;password&quot; /&gt;
-   &lt;input name=&quot;continue&quot; type=&quot;submit&quot; value=&quot;Login&quot; /&gt;
-   &lt;input name=&quot;continue&quot; type=&quot;button&quot; value=&quot;Clear&quot; /&gt;
+  &lt;form id="loginForm"&gt;
+   &lt;input name="username" type="text" /&gt;
+   &lt;input name="password" type="password" /&gt;
+   &lt;input name="continue" type="submit" value="Login" /&gt;
+   &lt;input name="continue" type="button" value="Clear" /&gt;
   &lt;/form&gt;
 &lt;/body&gt;
-&lt;html&gt;
-</pre></div>
+&lt;html&gt;</pre>
 </div>
 <p>The username &amp; password elements can be located like this:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">username</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_name</span><span class="p">(</span><span class="s">&#39;username&#39;</span><span class="p">)</span>
@@ -126,8 +126,7 @@ attribute, a <tt class="docutils literal"><span class="pre">NoSuchElementExcepti
 </div>
 <p>This will give the &#8220;Login&#8221; button as it occur before the &#8220;Clear&#8221;
 button:</p>
-<div class="highlight-python"><div class="highlight"><pre>continue = driver.find_element_by_name(&#39;continue&#39;)
-</pre></div>
+<div class="highlight-python"><pre>continue = driver.find_element_by_name('continue')</pre>
 </div>
 </div>
 <div class="section" id="locating-by-xpath">
@@ -151,17 +150,16 @@ or name attribute (ideally a parent element) you can locate your
 target element based on the relationship.  This is much less likely to
 change and can make your tests more robust.</p>
 <p>For instance, conside this page source:</p>
-<div class="highlight-python"><div class="highlight"><pre>&lt;html&gt;
+<div class="highlight-python"><pre>&lt;html&gt;
  &lt;body&gt;
-  &lt;form id=&quot;loginForm&quot;&gt;
-   &lt;input name=&quot;username&quot; type=&quot;text&quot; /&gt;
-   &lt;input name=&quot;password&quot; type=&quot;password&quot; /&gt;
-   &lt;input name=&quot;continue&quot; type=&quot;submit&quot; value=&quot;Login&quot; /&gt;
-   &lt;input name=&quot;continue&quot; type=&quot;button&quot; value=&quot;Clear&quot; /&gt;
+  &lt;form id="loginForm"&gt;
+   &lt;input name="username" type="text" /&gt;
+   &lt;input name="password" type="password" /&gt;
+   &lt;input name="continue" type="submit" value="Login" /&gt;
+   &lt;input name="continue" type="button" value="Clear" /&gt;
   &lt;/form&gt;
 &lt;/body&gt;
-&lt;html&gt;
-</pre></div>
+&lt;html&gt;</pre>
 </div>
 <p>The form elements can be located like this:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">login_form</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_xpath</span><span class="p">(</span><span class="s">&quot;/html/body/form[1]&quot;</span><span class="p">)</span>
@@ -226,14 +224,13 @@ strategy, the first element with the link text value matching the
 location will be returned.  If no element has a matching link text
 attribute, a <tt class="docutils literal"><span class="pre">NoSuchElementException</span></tt> will be raised.</p>
 <p>For instance, consider this page source:</p>
-<div class="highlight-python"><div class="highlight"><pre>&lt;html&gt;
+<div class="highlight-python"><pre>&lt;html&gt;
  &lt;body&gt;
   &lt;p&gt;Are you sure you want to do this?&lt;/p&gt;
-  &lt;a href=&quot;continue.html&quot;&gt;Continue&lt;/a&gt;
-  &lt;a href=&quot;cancel.html&quot;&gt;Cancel&lt;/a&gt;
+  &lt;a href="continue.html"&gt;Continue&lt;/a&gt;
+  &lt;a href="cancel.html"&gt;Cancel&lt;/a&gt;
 &lt;/body&gt;
-&lt;html&gt;
-</pre></div>
+&lt;html&gt;</pre>
 </div>
 <p>The continue.html link can be located like this:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">continue_link</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_link_text</span><span class="p">(</span><span class="s">&#39;Continue&#39;</span><span class="p">)</span>
@@ -248,13 +245,12 @@ strategy, the first element with the give tag name will be returned.
 If no element has a matching tag name, a <tt class="docutils literal"><span class="pre">NoSuchElementException</span></tt>
 will be raised.</p>
 <p>For instance, conside this page source:</p>
-<div class="highlight-python"><div class="highlight"><pre>&lt;html&gt;
+<div class="highlight-python"><pre>&lt;html&gt;
  &lt;body&gt;
   &lt;h1&gt;Welcome&lt;/h1&gt;
   &lt;p&gt;Site content goes here.&lt;/p&gt;
 &lt;/body&gt;
-&lt;html&gt;
-</pre></div>
+&lt;html&gt;</pre>
 </div>
 <p>The heading (h1) element can be located like this:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">heading1</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_tag_name</span><span class="p">(</span><span class="s">&#39;h1&#39;</span><span class="p">)</span>
@@ -268,12 +264,11 @@ With this strategy, the first element with the matching class attribute
 name will be returned.  If no element has a matching class attribute name,
 a <tt class="docutils literal"><span class="pre">NoSuchElementException</span></tt> will be raised.</p>
 <p>For instance, consider this page source:</p>
-<div class="highlight-python"><div class="highlight"><pre>&lt;html&gt;
+<div class="highlight-python"><pre>&lt;html&gt;
  &lt;body&gt;
-  &lt;p class=&quot;content&quot;&gt;Site content goes here.&lt;/p&gt;
+  &lt;p class="content"&gt;Site content goes here.&lt;/p&gt;
 &lt;/body&gt;
-&lt;html&gt;
-</pre></div>
+&lt;html&gt;</pre>
 </div>
 <p>The &#8220;p&#8221; element can be located like this:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">content</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_class_name</span><span class="p">(</span><span class="s">&#39;content&#39;</span><span class="p">)</span>
@@ -287,12 +282,11 @@ With this strategy, the first element with the matching CSS selector
 will be returned.  If no element has a matching CSS selector,
 a <tt class="docutils literal"><span class="pre">NoSuchElementException</span></tt> will be raised.</p>
 <p>For instance, consider this page source:</p>
-<div class="highlight-python"><div class="highlight"><pre>&lt;html&gt;
+<div class="highlight-python"><pre>&lt;html&gt;
  &lt;body&gt;
-  &lt;p class=&quot;content&quot;&gt;Site content goes here.&lt;/p&gt;
+  &lt;p class="content"&gt;Site content goes here.&lt;/p&gt;
 &lt;/body&gt;
-&lt;html&gt;
-</pre></div>
+&lt;html&gt;</pre>
 </div>
 <p>The &#8220;p&#8221; element can be located like this:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">content</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_css_selector</span><span class="p">(</span><span class="s">&#39;p.content&#39;</span><span class="p">)</span>
@@ -340,7 +334,7 @@ on CSS selectors.</p>
 <div id="searchbox" style="display: none">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" size="18" />
       <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
@@ -361,18 +355,21 @@ on CSS selectors.</p>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
           <a href="waits.html" title="5. Waits"
              >next</a> |</li>
         <li class="right" >
           <a href="navigating.html" title="3. Navigating"
              >previous</a> |</li>
-        <li><a href="index.html">RobusTest Support 2 documentation</a> &raquo;</li>
-          <li><a href="selenium.html" >1. Selenium</a> &raquo;</li> 
+        <li><a href="index.html">RobusTest Support v2 documentation</a> &raquo;</li>
+          <li><a href="selenium.html" >3. Selenium</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
         &copy; Copyright .
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
     </div>
   </body>
 </html>

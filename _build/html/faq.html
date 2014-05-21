@@ -1,19 +1,18 @@
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>7. Appendix: Frequently Asked Questions &mdash; RobusTest Support 2 documentation</title>
-    
+    <title>7. Appendix: Frequently Asked Questions &mdash; RobusTest Support v2 documentation</title>
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
+        URL_ROOT:    '',
         VERSION:     '2',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
@@ -24,8 +23,8 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
-    <link rel="top" title="RobusTest Support 2 documentation" href="index.html" />
-    <link rel="up" title="1. Selenium" href="selenium.html" />
+    <link rel="top" title="RobusTest Support v2 documentation" href="index.html" />
+    <link rel="up" title="3. Selenium" href="selenium.html" />
     <link rel="prev" title="6. WebDriver API" href="api.html" /> 
   </head>
   <body>
@@ -36,10 +35,13 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
           <a href="api.html" title="6. WebDriver API"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">RobusTest Support 2 documentation</a> &raquo;</li>
-          <li><a href="selenium.html" accesskey="U">1. Selenium</a> &raquo;</li> 
+        <li><a href="index.html">RobusTest Support v2 documentation</a> &raquo;</li>
+          <li><a href="selenium.html" accesskey="U">3. Selenium</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -55,8 +57,7 @@
 <h2>7.1. How to use ChromeDriver ?<a class="headerlink" href="#how-to-use-chromedriver" title="Permalink to this headline">¶</a></h2>
 <p>Download the latest <a class="reference external" href="https://code.google.com/p/chromedriver/downloads/list">chromedriver from download page</a>.  Unzip the
 file:</p>
-<div class="highlight-python"><div class="highlight"><pre>unzip chromedriver_linux32_x.x.x.x.zip
-</pre></div>
+<div class="highlight-python"><pre>unzip chromedriver_linux32_x.x.x.x.zip</pre>
 </div>
 <p>You should see a <tt class="docutils literal"><span class="pre">chromedriver</span></tt> executable.  Now you can create an instance of
 Chrome WebDriver like this:</p>
@@ -96,8 +97,7 @@ the height of the entire body of the page.</p>
 <p>The first step is to identify the type of file you want to auto save.</p>
 <p>To identify the content type you want to download automatically, you
 can use <a class="reference external" href="http://curl.haxx.se/">curl</a>:</p>
-<div class="highlight-python"><div class="highlight"><pre>curl -I URL | grep &quot;Content-Type&quot;
-</pre></div>
+<div class="highlight-python"><pre>curl -I URL | grep "Content-Type"</pre>
 </div>
 <p>Another way to find content type is using the <a class="reference external" href="http://python-requests.org">requests</a> module, you can use it like this:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">requests</span>
@@ -190,7 +190,7 @@ want to download the files.</p>
 <div id="searchbox" style="display: none">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" size="18" />
       <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
@@ -211,15 +211,18 @@ want to download the files.</p>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
           <a href="api.html" title="6. WebDriver API"
              >previous</a> |</li>
-        <li><a href="index.html">RobusTest Support 2 documentation</a> &raquo;</li>
-          <li><a href="selenium.html" >1. Selenium</a> &raquo;</li> 
+        <li><a href="index.html">RobusTest Support v2 documentation</a> &raquo;</li>
+          <li><a href="selenium.html" >3. Selenium</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
         &copy; Copyright .
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
     </div>
   </body>
 </html>

@@ -1,0 +1,249 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>1.4.9. Q&amp;A &mdash; RobusTest Support v2 documentation</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="RobusTest Support v2 documentation" href="index.html" />
+    <link rel="up" title="1. RITE- RobusTest Integrated Testing Environment" href="RITE.html" />
+    <link rel="next" title="3. Selenium" href="selenium.html" />
+    <link rel="prev" title="1.4.8. Examples" href="Examples.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="selenium.html" title="3. Selenium"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="Examples.html" title="1.4.8. Examples"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">RobusTest Support v2 documentation</a> &raquo;</li>
+          <li><a href="RITE.html" accesskey="U">1. RITE- RobusTest Integrated Testing Environment</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="q-a">
+<h1>1.4.9. Q&amp;A<a class="headerlink" href="#q-a" title="Permalink to this headline">¶</a></h1>
+<p><strong>General</strong></p>
+<p>Q: What technologies are used in RITE?</p>
+<p>A: RITE is a <a class="reference external" href="http://code.google.com/chrome/extensions/getstarted.html">Chrome extension</a> and everything is Javascript.</p>
+<p>Q: How does RITE handle logic controls like if/else, and while loop?</p>
+<p>A: For simplicity reason, RITE doesn&#8217;t handle logic controls/loops anymore. Users are welcomed to export the tests in Java code and edit it themselves.</p>
+<p>Q: How can I add a custom function?</p>
+<p>A: You could either write your own Javascript function or pick one from store. You can also submit yours to the store under certain category, so others could leverage it.</p>
+<p>Q: How should I validate my site?</p>
+<p>A: Go and take a look at our sample code site or browse through the handy methods store to learn what other users are validating.</p>
+<p>Q: Who are the potential users?</p>
+<p>A: Use cases:</p>
+<ul>
+<li><dl class="first docutils">
+<dt>A tester with some existing automation using Webdriver.</dt>
+<dd><ul class="first last simple">
+<li>RITE could be used to generate webdriver code.</li>
+<li>RITE could be used to maintain the locators.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>A dev who just wants to have some simple regression tests.</dt>
+<dd><ul class="first last simple">
+<li>RITE could be used to generate tests, saved to the cloud, and playback later.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>A user who wants to repeat some actions, like goes to a website, does a query and checks for the camera price.</dt>
+<dd><ul class="first last simple">
+<li>RITE could generate such a script.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>A fresh tester who wants to learn how to test his/her websites.</dt>
+<dd><ul class="first last simple">
+<li>From code samples and methods store, he/she could learn how other people are testing their websites.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>A dev who is investigating a bug.</dt>
+<dd><ul class="first last simple">
+<li>RITE provides screenshots for a bug to show how the bug was found.</li>
+<li>If the environment has not changed, RITE could replay step by step for further investigation.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>A Chrome OS member.</dt>
+<dd><ul class="first last simple">
+<li>RITE is a pure Chrome Extension in Javascript, so it’s compatible with Chrome OS.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>A lead who wants to monitor his project.</dt>
+<dd><ul class="first last simple">
+<li>From the backend server, the results of each run should be displayed, which could be used to monitor the project.</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<img alt="image/trends.png" src="image/trends.png" />
+<p><strong>Recording</strong></p>
+<p>Q: Why it doesn&#8217;t record the text I typed in a text box?</p>
+<p>A: RITE records the onchange event in page, and usually the event occurs when the text box loses focus, which in other words, might mean clicking on somewhere else. For example, when you perform a search, usually you might type in some key words, and click the submit button, at which point that both of the type and click commands are generated. Another possible reason is that the box is inside a dynamically generated iframe, for example, Gmail or the Google+ sharebox. In this case, we could write JS functions to simulate the steps.</p>
+<p>Q: How to wait until an expected element shows up?</p>
+<p>A: Sometimes you might need to wait until certain new UI shows up before continue. In this case, we could add a verify command for an element in the new UI. During playback, it will wait until the element shows up as long as it&#8217;s within the valid interval.</p>
+<p>Q: Why didn&#8217;t my recorded script perform correctly?</p>
+<p>A: This could be caused by many reasons.</p>
+<ul class="simple">
+<li>One of the common scenarios is that, you might have clicked a link to do some xhr request and show up a new UI and then continue interact with elements within it. In this case, it&#8217;s likely sometimes RITE tries to execute the following commands without waiting until the UI shows up, you could add a verify command for an element in the new UI during recording to solve the waiting issue.</li>
+<li>Another common issue is that for some reason the generated script has a bug, for example, it might miss generating a command if recording was too fast or some cases that RITE couldn&#8217;t record like flash, etc.</li>
+<li>The process you&#8217;ve recorded is not reproducible. For example, you might have clicked a link to delete an item in your script. Unfortunately, in this case, it wouldn&#8217;t be able to playback because the link no longer exists.</li>
+</ul>
+<p>Q: How do I update a recorded script?</p>
+<p>A: After recording a script, you might want to inject new recorded steps in the original one, update an xpath, or move the step up and down. These could be achieved within the details dialog by double clicking a generated line in editor.</p>
+<p>Q: Why can&#8217;t I record the page?</p>
+<p>A: There could be several causes:</p>
+<p>1. The tab was opened before installing the RITE extension. This is very likely to happen for first time users. You could simply
+refresh the tab under record and then it should work.</p>
+<ol class="arabic simple" start="2">
+<li>The tab under record was accidentally closed. The solution is to select a new tab to record.</li>
+<li>The URL doesn&#8217;t allow recording. For example: Blank page (<a class="reference external" href="about:blank">about:blank</a>),</li>
+</ol>
+<p><a class="reference external" href="https://chrome.google.com/webstore/category/home">https://chrome.google.com/webstore/category/home</a>, and a few more.</p>
+<p>Q: How do I select a new tab to record?
+A: You could switch to a new tab and continue recording at any time by 1. Go to the target URL in the new tab. 2. Click the RITE extension icon in the top right corner on Chrome. 3. Select the Record/Playback option again in the popup dialog. Now the RITE main console should be in the front, and the new tab has been successfully selected to record.</p>
+<p><strong>Playback</strong></p>
+<p>Q: Why can&#8217;t I playback my script?</p>
+<p>If you couldn&#8217;t playback a script, for example, a new tab is not automatically opened for playback, or it&#8217;s stuck at certain point which is not expected, you could always try the stop button in the playback runtime dialog, which will clear the playback status. Now you could try playback again.</p>
+<p>Q: Why did it click the wrong video/item when playback?</p>
+<p>By default, RITE locates elements by matching the attributes, and whichever element matches the most succeeds. This works well in dealing with the dynamic attributes, but on the other side, it&#8217;s possible to choose an element that&#8217;s not original at all. What you could do is to set some attributes to &#8220;Must&#8221;, and this will force to find either the exact element or fail.</p>
+<p><strong>Save and Load</strong></p>
+<dl class="docutils">
+<dt>Q: Why do I see errors when I load/save a script?</dt>
+<dd><ul class="first last simple">
+<li>The server is on top of appengine, which occasionally has hiccups to store/load projects and scripts. This should be very rare, and you have to wait until it goes back.</li>
+<li>Since a limit on appengine storage, the script length can not be too long, otherwise it will return a 500 error while saving.</li>
+</ul>
+</dd>
+</dl>
+<p><strong>Limitation</strong></p>
+<p>Q: What limitation does RITE have?</p>
+<dl class="docutils">
+<dt>A:</dt>
+<dd><ul class="first last simple">
+<li>RITE is a Chrome extension and mostly can only work with Chrome.</li>
+<li>RITE only supports recording one tab at a time and doesn&#8217;t record flash.</li>
+<li>It doesn&#8217;t handle conditions or loops unless you manually write up custom JS functions.</li>
+<li>There isn&#8217;t a way to reuse a script from another script at this point.</li>
+<li>Doesn&#8217;t record keyboard commands.</li>
+<li>Doesn&#8217;t support recording native dialogs like uploading stuff.</li>
+</ul>
+</dd>
+</dl>
+<p><strong>Comments</strong></p>
+<p>You do not have permission to add comments</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/RobusTest.png" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="Examples.html"
+                        title="previous chapter">1.4.8. Examples</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="selenium.html"
+                        title="next chapter">3. Selenium</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/Q&amp;A.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="selenium.html" title="3. Selenium"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="Examples.html" title="1.4.8. Examples"
+             >previous</a> |</li>
+        <li><a href="index.html">RobusTest Support v2 documentation</a> &raquo;</li>
+          <li><a href="RITE.html" >1. RITE- RobusTest Integrated Testing Environment</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright .
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

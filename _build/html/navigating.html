@@ -1,19 +1,18 @@
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>3. Navigating &mdash; RobusTest Support 2 documentation</title>
-    
+    <title>3. Navigating &mdash; RobusTest Support v2 documentation</title>
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
+        URL_ROOT:    '',
         VERSION:     '2',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
@@ -24,8 +23,8 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
-    <link rel="top" title="RobusTest Support 2 documentation" href="index.html" />
-    <link rel="up" title="1. Selenium" href="selenium.html" />
+    <link rel="top" title="RobusTest Support v2 documentation" href="index.html" />
+    <link rel="up" title="3. Selenium" href="selenium.html" />
     <link rel="next" title="4. Locating Elements" href="locating-elements.html" />
     <link rel="prev" title="2. Getting Started" href="getting-started.html" /> 
   </head>
@@ -37,13 +36,16 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
           <a href="locating-elements.html" title="4. Locating Elements"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="getting-started.html" title="2. Getting Started"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">RobusTest Support 2 documentation</a> &raquo;</li>
-          <li><a href="selenium.html" accesskey="U">1. Selenium</a> &raquo;</li> 
+        <li><a href="index.html">RobusTest Support v2 documentation</a> &raquo;</li>
+          <li><a href="selenium.html" accesskey="U">3. Selenium</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -72,8 +74,7 @@ really like to do is to interact with the pages, or, more
 specifically, the HTML elements within a page.  First of all, we need
 to find one.  WebDriver offers a number of ways to find elements.  For
 example, given an element defined as:</p>
-<div class="highlight-python"><div class="highlight"><pre>&lt;input type=&quot;text&quot; name=&quot;passwd&quot; id=&quot;passwd-id&quot; /&gt;
-</pre></div>
+<div class="highlight-python"><pre>&lt;input type="text" name="passwd" id="passwd-id" /&gt;</pre>
 </div>
 <p>you could find it using any of:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">element</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_id</span><span class="p">(</span><span class="s">&quot;passwd-id&quot;</span><span class="p">)</span>
@@ -195,8 +196,7 @@ named windows using the &#8220;switch_to_window&#8221; method:</p>
 <p>All calls to <tt class="docutils literal"><span class="pre">driver</span></tt> will now be interpreted as being directed to
 the particular window.  But how do you know the window&#8217;s name? Take a
 look at the javascript or link that opened it:</p>
-<div class="highlight-python"><div class="highlight"><pre>&lt;a href=&quot;somewhere.html&quot; target=&quot;windowName&quot;&gt;Click here to open a new window&lt;/a&gt;
-</pre></div>
+<div class="highlight-python"><pre>&lt;a href="somewhere.html" target="windowName"&gt;Click here to open a new window&lt;/a&gt;</pre>
 </div>
 <p>Alternatively, you can pass a &#8220;window handle&#8221; to the
 &#8220;switch_to_window()&#8221; method.  Knowing this, it&#8217;s possible to iterate
@@ -259,18 +259,17 @@ one browser over another.</p>
 <p>Before we leave these next steps, you may be interested in
 understanding how to use cookies.  First of all, you need to be on the
 domain that the cookie will be valid for:</p>
-<div class="highlight-python"><div class="highlight"><pre># Go to the correct domain
-driver.get(&quot;http://www.example.com&quot;)
+<div class="highlight-python"><pre># Go to the correct domain
+driver.get("http://www.example.com")
 
-# Now set the cookie. This one&#39;s valid for the entire domain
-cookie = {&quot;key&quot;: &quot;value&quot;})
+# Now set the cookie. This one's valid for the entire domain
+cookie = {"key": "value"})
 driver.add_cookie(cookie)
 
 # And now output all the available cookies for the current URL
 all_cookies = driver.get_cookies()
 for cookie_name, cookie_value in all_cookies.items():
-    print(&quot;%s -&gt; %s&quot;, cookie_name, cookie_value)
-</pre></div>
+    print("%s -&gt; %s", cookie_name, cookie_value)</pre>
 </div>
 </div>
 </div>
@@ -312,7 +311,7 @@ for cookie_name, cookie_value in all_cookies.items():
 <div id="searchbox" style="display: none">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" size="18" />
       <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
@@ -333,18 +332,21 @@ for cookie_name, cookie_value in all_cookies.items():
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
           <a href="locating-elements.html" title="4. Locating Elements"
              >next</a> |</li>
         <li class="right" >
           <a href="getting-started.html" title="2. Getting Started"
              >previous</a> |</li>
-        <li><a href="index.html">RobusTest Support 2 documentation</a> &raquo;</li>
-          <li><a href="selenium.html" >1. Selenium</a> &raquo;</li> 
+        <li><a href="index.html">RobusTest Support v2 documentation</a> &raquo;</li>
+          <li><a href="selenium.html" >3. Selenium</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
         &copy; Copyright .
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
     </div>
   </body>
 </html>

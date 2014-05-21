@@ -1,0 +1,151 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>1.3.3. Code generation &mdash; RobusTest Support v2 documentation</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="RobusTest Support v2 documentation" href="index.html" />
+    <link rel="up" title="1. RITE- RobusTest Integrated Testing Environment" href="RITE.html" />
+    <link rel="next" title="1.3.4. Content Map" href="content map.html" />
+    <link rel="prev" title="1.3.2. Verification" href="verification.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="content map.html" title="1.3.4. Content Map"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="verification.html" title="1.3.2. Verification"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">RobusTest Support v2 documentation</a> &raquo;</li>
+          <li><a href="RITE.html" accesskey="U">1. RITE- RobusTest Integrated Testing Environment</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="code-generation">
+<h1>1.3.3. Code generation<a class="headerlink" href="#code-generation" title="Permalink to this headline">¶</a></h1>
+<img alt="image/image9.png" src="image/image9.png" />
+<p>In this page, we&#8217;ll use the following scenario: A user clicks the video link on Google home page, and the page redirects to the Google videos page. The user then clicks the news link on Google videos page, and it redirects to Google news page afterwards.</p>
+<p>The above image shows the snippet of generated code whose syntax is relatively self-explanatory.</p>
+<p><strong>How to read the generated code</strong>:</p>
+<div class="highlight-python"><pre>/**
+ *@fileoverview
+
+ *@author
+
+*/</pre>
+</div>
+<p>The top doc string documents the site that the script starts on is Google home page, as well as the author info.</p>
+<p><cite>click(getElem(&#8220;click-span-Videos-345&#8221;));</cite></p>
+<p>From this line, we know that it&#8217;s talking about a click action is performed on an element which has Videos as text.</p>
+<p><cite>redirectTo(&#8220;http://www.google.com/videohp?hl=en&#8221;);</cite></p>
+<p>This line doesn&#8217;t do anything and only acts like a comment.</p>
+<p><strong>Under the cover</strong></p>
+<p>RITE generates click(getElem(&#8220;click-span-Videos-345&#8221;)); when user clicks on the video link. The syntax is composed of three parts:</p>
+<ol class="arabic simple">
+<li>Action. In this case, it&#8217;s a click action. It could also be a type, verify, select, or move, etc.</li>
+<li>getElem. This is an internal defined function which reads a step id and returns the associated dom element.</li>
+<li>Step id. During recording, RITE actually collects much more information like screenshot, the dom element&#8217;s attributes, location, xpath, etc. and hide them from users. The information is associated with the step id, which in this case is &#8220;click-span-Videos-345&#8221;. The step id is generated on the fly which is composed of step action, dom element&#8217;s tagname, text/value, and a random number.</li>
+</ol>
+<p>In short,  the generated command syntax is simply ACTION(STEP ID, DATA VAR), which represents you&#8217;ve done some actions and maybe with some inputs to a particular dom element. We might get rid of the &#8220;getElem&#8221; syntax at some point since it&#8217;s not recommended to manually modify the script any more.</p>
+<blockquote>
+<div><p><strong>Comments</strong></p>
+<blockquote>
+<div>You do not have permission to add comments.</div></blockquote>
+</div></blockquote>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/RobusTest.png" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="verification.html"
+                        title="previous chapter">1.3.2. Verification</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="content map.html"
+                        title="next chapter">1.3.4. Content Map</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/code generation.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="content map.html" title="1.3.4. Content Map"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="verification.html" title="1.3.2. Verification"
+             >previous</a> |</li>
+        <li><a href="index.html">RobusTest Support v2 documentation</a> &raquo;</li>
+          <li><a href="RITE.html" >1. RITE- RobusTest Integrated Testing Environment</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright .
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,165 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>1.1.4. A quick start &mdash; RobusTest Support v2 documentation</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="RobusTest Support v2 documentation" href="index.html" />
+    <link rel="up" title="1. RITE- RobusTest Integrated Testing Environment" href="RITE.html" />
+    <link rel="next" title="1.2.1. Basics" href="Basics.html" />
+    <link rel="prev" title="1.1.3. Main console" href="main console.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="Basics.html" title="1.2.1. Basics"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="main console.html" title="1.1.3. Main console"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">RobusTest Support v2 documentation</a> &raquo;</li>
+          <li><a href="RITE.html" accesskey="U">1. RITE- RobusTest Integrated Testing Environment</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="a-quick-start">
+<h1>1.1.4. A quick start<a class="headerlink" href="#a-quick-start" title="Permalink to this headline">¶</a></h1>
+<p>Before moving to each individual section, let&#8217;s take a look at a real example and get hands on RITE.</p>
+<p><strong>1.Prerequisites</strong></p>
+<p>Please make sure you&#8217;ve got <a class="reference external" href="https://www.google.com/chrome/browser/">Chrome</a> , and the latest <a class="reference external" href="https://chrome.google.com/">RITE extension</a> installed.</p>
+<p><strong>2.Open example site and RITE console</strong></p>
+<p>In this tutorial, we&#8217;ll play with the dom elements in our <a class="reference external" href="http://rpfserver.appspot.com/examples">example site</a>. Let&#8217;s open the link in a new Chrome tab, and then click RITE icon (which is around the top right corner of Chrome), choose the RITE option in popup, and now we should see the RITE main console.</p>
+<p><strong>3.Start recording</strong></p>
+<p>To start recording, let&#8217;s click the round record button. Some changes you will notice are: The button set in menu bar changes, A project/script loading/saving area shows up, the URL of the selected page is recorded, some doc string appears in editor and if you move cursor in the tab under record, you should see elements get yellow highlighted on mouse over.</p>
+<p>Now let&#8217;s perform the following (or any number) actions:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Click the &#8220;change color&#8221; button</li>
+<li>Click one of the radio buttons</li>
+<li>Click the checkbox</li>
+<li>Select an option say Chrome</li>
+<li>Type in some text in the input box and click show</li>
+<li>Type in some text in the text area and click show</li>
+</ul>
+</div></blockquote>
+<img alt="image/image2.png" src="image/image2.png" />
+<p>In the RPF editor, we will see the following scripts generated:</p>
+<p><cite>click(getElem(&#8220;click-input-changecolor-869&#8221;));</cite></p>
+<p><cite>click(getElem(&#8220;click-input-2-497&#8221;));</cite></p>
+<p><cite>click(getElem(&#8220;click-input-950&#8221;));</cite></p>
+<p><cite>select(getElem(&#8220;select-select-GoogleChromeAndroid-367&#8221;), ContentMap[&#8220;SELECT0-488&#8221;]);</cite></p>
+<p><cite>click(getElem(&#8220;click-input-text-226&#8221;));</cite></p>
+<p><cite>type(getElem(&#8220;type-input-text-362&#8221;), ContentMap[&#8220;INPUT4-206&#8221;]);</cite></p>
+<p><cite>click(getElem(&#8220;click-input-show-262&#8221;));</cite></p>
+<p><cite>click(getElem(&#8220;click-textarea-textarea-87&#8221;));</cite></p>
+<p><cite>input(getElem(&#8220;change-textarea-textarea-889&#8221;), ContentMap[&#8220;TEXTAREA0-651&#8221;]);</cite></p>
+<p><cite>click(getElem(&#8220;click-input-show-652&#8221;));</cite></p>
+<p><strong>4.Play it back</strong></p>
+<p>Let&#8217;s first click the stop button in the menu bar to stop recording. Now you&#8217;ll have more buttons appear, and let&#8217;s click the play button next to the record button. At this point we should see a playback runtime dialog shows up.</p>
+<img alt="image/image3.png" src="image/image3.png" />
+<p>Once we click the play button in the dialog, we&#8217;ll see RPF automatically opens a new Chrome browser and executes the recorded script step by step.</p>
+<p><strong>5.Save it to cloud</strong></p>
+<p>Let&#8217;s close the playback runtime dialog, type in the project and script name, and hit the save button in menu bar. If it&#8217;s successful, the script should have been saved to the server.</p>
+<p><strong>6.Load it back</strong></p>
+<p>Let&#8217;s click the refresh button (the last one in menu bar) to refresh the main console. Now let&#8217;s click the load button to turn on the project/script area, and type in both names which you just created. Now we should see the script gets loaded back to editor. You could also try to click the camera look button on menu bar to view the screenshots of the steps to remind you of the scenario. A quick trick here is that you could try Ctrl+Alt+s to switch the view back and forth between the script and readable modes.</p>
+<blockquote>
+<div><p><strong>Comments</strong></p>
+<blockquote>
+<div>You do not have permission to add comments.</div></blockquote>
+</div></blockquote>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/RobusTest.png" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="main console.html"
+                        title="previous chapter">1.1.3. Main console</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="Basics.html"
+                        title="next chapter">1.2.1. Basics</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/A quick start.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="Basics.html" title="1.2.1. Basics"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="main console.html" title="1.1.3. Main console"
+             >previous</a> |</li>
+        <li><a href="index.html">RobusTest Support v2 documentation</a> &raquo;</li>
+          <li><a href="RITE.html" >1. RITE- RobusTest Integrated Testing Environment</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright .
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

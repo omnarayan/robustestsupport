@@ -1,0 +1,136 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>1.3.2. Verification &mdash; RobusTest Support v2 documentation</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="RobusTest Support v2 documentation" href="index.html" />
+    <link rel="up" title="1. RITE- RobusTest Integrated Testing Environment" href="RITE.html" />
+    <link rel="next" title="1.3.3. Code generation" href="code generation.html" />
+    <link rel="prev" title="1.3.1. Undercovers" href="undercovers.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="code generation.html" title="1.3.3. Code generation"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="undercovers.html" title="1.3.1. Undercovers"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">RobusTest Support v2 documentation</a> &raquo;</li>
+          <li><a href="RITE.html" accesskey="U">1. RITE- RobusTest Integrated Testing Environment</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="verification">
+<h1>1.3.2. Verification<a class="headerlink" href="#verification" title="Permalink to this headline">¶</a></h1>
+<p>In a recorded web UI test, verification is the most important part. RITE provides two ways of verification.</p>
+<p><strong>Right click to verify element&#8217;s attributes</strong></p>
+<p>For most of the time, you might just want to verify whether the attributes of an element are as expected. During recording, you could right click on any element which needs verification, and a popup will be shown in the main console:</p>
+<img alt="image/image8.png" src="image/image8.png" />
+<p>This dialog is used to generate the not so obvious commands, in this case, the verify command (you could also generate verifyNot and mouseover command here). As is shown, the dialog contains the xpath and all the attributes of the selected dom element. For example, if users want to verify that the dom element needs to have the text &#8220;Images&#8221;, then they could simply switch from Optional to Must. As a result, during playback, if the dom element doesn&#8217;t have the exact text, it would report an error.</p>
+<p><strong>A real example</strong></p>
+<p>Let&#8217;s open our <a class="reference external" href="http://rpfserver.appspot.com/examples">example site</a> again. In record mode, let&#8217;s right click the bold font text &#8220;verify this&#8221;, this will open the Validation dialog in console. If we&#8217;d like to verify both the text and and style, we&#8217;ll need to choose the corresponding &#8220;Must&#8221; radio buttons. After that, we click save button to generate the verify command. We could always change it again in the <a class="reference external" href="details-dialog.html">details dialog</a>.</p>
+<p><strong>Custom script to verify more complicated  tasks</strong></p>
+<p>The other way is to call custom JS functions. More details will be discussed in the <a class="reference external" href="custom-script.html">custom script</a> section. In short, for verification like validate the number of entries in page, whether a group of elements are aligned up, or whether the page title is correct and background color looks alright, users could write their own JS script to verify.</p>
+<blockquote>
+<div><p><strong>Comments</strong></p>
+<blockquote>
+<div>You do not have permission to add comments.</div></blockquote>
+</div></blockquote>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/RobusTest.png" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="undercovers.html"
+                        title="previous chapter">1.3.1. Undercovers</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="code generation.html"
+                        title="next chapter">1.3.3. Code generation</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/verification.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="code generation.html" title="1.3.3. Code generation"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="undercovers.html" title="1.3.1. Undercovers"
+             >previous</a> |</li>
+        <li><a href="index.html">RobusTest Support v2 documentation</a> &raquo;</li>
+          <li><a href="RITE.html" >1. RITE- RobusTest Integrated Testing Environment</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright .
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,150 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>1.4.5. Webdriver &mdash; RobusTest Support v2 documentation</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="RobusTest Support v2 documentation" href="index.html" />
+    <link rel="up" title="1. RITE- RobusTest Integrated Testing Environment" href="RITE.html" />
+    <link rel="next" title="1.4.6. Xpath finder" href="Xpath-finder.html" />
+    <link rel="prev" title="1.4.4. Runs and results" href="server-pages.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="Xpath-finder.html" title="1.4.6. Xpath finder"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="server-pages.html" title="1.4.4. Runs and results"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">RobusTest Support v2 documentation</a> &raquo;</li>
+          <li><a href="RITE.html" accesskey="U">1. RITE- RobusTest Integrated Testing Environment</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="webdriver">
+<h1>1.4.5. Webdriver<a class="headerlink" href="#webdriver" title="Permalink to this headline">¶</a></h1>
+<p><strong>How RITE and Webdriver are related</strong></p>
+<p>RITE could translate a project - a group of scripts into the Java webdriver code, which brings in several benefits:</p>
+<ol class="arabic simple">
+<li>The RITE generated code could be potentially run across other browsers.</li>
+<li>After being translated into Java page classes, users could easily write their own code to extend the classes and implement any complicate methods.</li>
+</ol>
+<p><strong>How to translate a RITE project to Webdriver code</strong></p>
+<p>Again, let&#8217;s start with a real example. Suppose we have a RITE project which contains two scripts that both start on Google home page. In one script, it navigates to Videos page then News page, and in the other, it navigates to Images page and News page.
+After we load the project, let&#8217;s click the project details button, and we&#8217;ll see:</p>
+<img alt="image/projectdetails.png" src="image/projectdetails.png" />
+<p>There are three tabs in this dialog: Export, Import, and Tests.</p>
+<p>The Export tab handles translating the project to Webdriver code. Let&#8217;s give it a package path say &#8220;com.google.testing&#8221;, save it, and then hit the export button. Now you should see a zip has been downloaded which might be called &#8220;tests.zip&#8221;.
+Open the zip and we&#8217;ll find a few Java files inside:</p>
+<ul class="simple">
+<li>BasePage.java.  This contains all of the fundamental methods for automation including click, select, verifyElement, type, move, etc.</li>
+<li>PageGoogle0.java and PageNewsGoogle1.java. By default, RITE creates a page class for each unique domain appears in the project. In this case, we have two different domains: www.google.com and news.google.com.</li>
+<li>Tests.java. For each script in the project, we&#8217;ll have a corresponding unit test defined in this file.</li>
+</ul>
+<p>For more details of the generated code, feel free to try it out or take a look at the attached zip.</p>
+<p>The Import tab requires the local server, which will be discussed later.</p>
+<p>The Tests tab will list all of the scripts within the project, and you could select any number of them for deletes.</p>
+<p><strong>Extending the generated Java page classes</strong></p>
+<p>Though RITE could generate Java code, you might need more complicated logic or maybe some internal API calls. In this case, you could simply write your own extended Java page classes to implement those, and leave the tedious xpath finding/maintenance work to RITE.</p>
+<p><strong>A diagram describing code generation</strong></p>
+<img alt="image/RITECodeGenerationDesignDoc_1.png" src="image/RITECodeGenerationDesignDoc_1.png" />
+<p><strong>Comments</strong></p>
+<blockquote>
+<div>You do not have permission to add comments.</div></blockquote>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/RobusTest.png" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="server-pages.html"
+                        title="previous chapter">1.4.4. Runs and results</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="Xpath-finder.html"
+                        title="next chapter">1.4.6. Xpath finder</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/webdriver.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="Xpath-finder.html" title="1.4.6. Xpath finder"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="server-pages.html" title="1.4.4. Runs and results"
+             >previous</a> |</li>
+        <li><a href="index.html">RobusTest Support v2 documentation</a> &raquo;</li>
+          <li><a href="RITE.html" >1. RITE- RobusTest Integrated Testing Environment</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright .
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,131 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>1.3.5. Descriptor &mdash; RobusTest Support v2 documentation</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="RobusTest Support v2 documentation" href="index.html" />
+    <link rel="up" title="1. Welcome to RITE documentation!" href="RITE.html" />
+    <link rel="next" title="1.4.1. Advanced" href="Advanced.html" />
+    <link rel="prev" title="1.3.4. Content Map" href="content map.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="Advanced.html" title="1.4.1. Advanced"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="content map.html" title="1.3.4. Content Map"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">RobusTest Support v2 documentation</a> &raquo;</li>
+          <li><a href="RITE.html" accesskey="U">1. Welcome to RITE documentation!</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="descriptor">
+<h1>1.3.5. Descriptor<a class="headerlink" href="#descriptor" title="Permalink to this headline">¶</a></h1>
+<p><strong>What&#8217;s descriptor?</strong></p>
+<p>It&#8217;s well known that one of the biggest pain of web UI automation is to maintain all of the dom element locators. In RITE, we provide two ways of locating an element. The traditional way is by xpath, which will be talked in the <a class="reference external" href="Xpath-finder.html">Xpath finder</a> section. The other way is by descriptor, which is actually an object containing all of the useful information of the dom element, for example the attributes, location, iframe info, etc.</p>
+<p><strong>How does descriptor work?</strong></p>
+<p>RITE uses a scoring algorithm to give all of the potential candidate elements scores based on how they match the information recorded in descriptor.  The element which gets the top score succeeds. Because of the fuzziness, the recorded automation becomes less fragile than before. For example, some element might have a random id, or some of the minor attributes have been changed, etc. In those cases, descriptor can do a very good job to continue getting the elements.</p>
+<p>By default, RITE uses descriptor to locate elements. If you feel more comfortable with xpaths, you could turn the &#8220;Use Xpath&#8221; option on in the settings dialog.</p>
+<blockquote>
+<div><p><strong>Comments</strong></p>
+<p>You do not have permission to add comments.</p>
+</div></blockquote>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/RobusTest.png" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="content map.html"
+                        title="previous chapter">1.3.4. Content Map</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="Advanced.html"
+                        title="next chapter">1.4.1. Advanced</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/descriptor.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="Advanced.html" title="1.4.1. Advanced"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="content map.html" title="1.3.4. Content Map"
+             >previous</a> |</li>
+        <li><a href="index.html">RobusTest Support v2 documentation</a> &raquo;</li>
+          <li><a href="RITE.html" >1. Welcome to RITE documentation!</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright .
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>
