@@ -7,6 +7,6 @@ RITE- RobusTest Integrated Testing Environment
    :numbered:
 
    home
-   basic
+   Basic
    undercovers
-   advanced
+   Advanced
