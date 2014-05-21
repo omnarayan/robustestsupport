@@ -6,7 +6,7 @@ In a recorded web UI test, verification is the most important part. RITE provide
 
 For most of the time, you might just want to verify whether the attributes of an element are as expected. During recording, you could right click on any element which needs verification, and a popup will be shown in the main console:
 
-.. image:: image/image8.png
+.. image:: img/image8.png
 
 This dialog is used to generate the not so obvious commands, in this case, the verify command (you could also generate verifyNot and mouseover command here). As is shown, the dialog contains the xpath and all the attributes of the selected dom element. For example, if users want to verify that the dom element needs to have the text "Images", then they could simply switch from Optional to Must. As a result, during playback, if the dom element doesn't have the exact text, it would report an error.
 

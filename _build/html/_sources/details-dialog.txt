@@ -2,7 +2,7 @@ Details dialog
 ---------------
 
 
-.. image:: image/Detailedinfo.png
+.. image:: img/Detailedinfo.png
    
 
 Double clicking on most of the generated command in editor will open the details dialog in console. We could do quite a few things here:

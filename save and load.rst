@@ -3,7 +3,7 @@ Save and load
 
 **The project/script loading area**
 
-.. image:: image/image5.png
+.. image:: img/image5.png
 
 
 Project

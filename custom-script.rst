@@ -9,7 +9,7 @@ Custom Script
 **The Custom script dialog**
 
 
-.. image:: image/customjs.png
+.. image:: img/customjs.png
 
 
 

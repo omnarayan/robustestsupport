@@ -6,11 +6,11 @@ After running multiple scripts of a project, RITE will return two links, one for
 
 Runs overview
 
-.. image:: image/runspage.png
+.. image:: img/runspage.png
 
 Results overview
 
-.. image:: image/resultpage.png
+.. image:: img/resultpage.png
 
 
 At this point, if you click on the "here" link in the result page, you'll see the screenshot captured when it failed.

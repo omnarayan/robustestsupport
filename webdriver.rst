@@ -15,7 +15,7 @@ Again, let's start with a real example. Suppose we have a RITE project which con
 After we load the project, let's click the project details button, and we'll see:
 
 
-.. image:: image/projectdetails.png
+.. image:: img/projectdetails.png
 
 There are three tabs in this dialog: Export, Import, and Tests.
 
@@ -39,7 +39,7 @@ Though RITE could generate Java code, you might need more complicated logic or m
 **A diagram describing code generation**
 
 
-.. image:: image/RITECodeGenerationDesignDoc_1.png
+.. image:: img/RITECodeGenerationDesignDoc_1.png
 
 
 

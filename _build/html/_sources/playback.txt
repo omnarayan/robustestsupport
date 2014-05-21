@@ -17,7 +17,7 @@ Click the playback button in the RPF menu bar. This will bring up a playback run
 
 **The playback runtime dialog**
 
-.. image:: image/image4.png 
+.. image:: img/image4.png 
 
 On the left side, it lists all of the script names of the current project. You could select one or more script to playback. Otherwise, if you don't select any, it will playback the currently loaded script by default. Also, if you didn't load any project yet, it won't show the left side selector at all. While you playback a group of scripts, it will show you the current status like x out of y are completed, and you'll have a choice to cancel the whole run by clicking the X cancel button.
 
@@ -51,7 +51,7 @@ This time, let's play with the bold "verify this" text in our `example site`_ by
 
 At this point, we should see the following options appeared in the playback runtime dialog.
 
-.. image:: image/handlers.png
+.. image:: img/handlers.png
 
 We could definitely choose "delete" to remove the line, but let's try "Update" now.  Once clicked, the tab under playback should pop up to front and if you right click on the "verify this" text again, the original dom element will be replaced by the new element. In the end, you could playback the script again and it should pass now.
 

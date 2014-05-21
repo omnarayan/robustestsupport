@@ -1,7 +1,7 @@
 Settings
 ---------
 
-.. image:: image/image7.png
+.. image:: img/image7.png
 
 In the Settings dialog, there are several options you could config:
 

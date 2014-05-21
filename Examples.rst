@@ -8,27 +8,27 @@ In this section, we'll have a look at a few scripts recorded on popular sites. O
 Google Maps
 
 
-.. image:: image/GoogleMaps.png
+.. image:: img/GoogleMaps.png
 
 Expedia
 
-.. image:: image/Expedia.png
+.. image:: img/Expedia.png
 
 Amazon
 
-.. image:: image/amazon.png
+.. image:: img/amazon.png
 
 Wikipedia    
 
-.. image:: image/Wikipedia.png
+.. image:: img/Wikipedia.png
 
 Yahoo  
 
-.. image:: image/Yahoo.png
+.. image:: img/Yahoo.png
 
 Youtube
 
-.. image:: image/Youtube.png
+.. image:: img/Youtube.png
 
 
 	

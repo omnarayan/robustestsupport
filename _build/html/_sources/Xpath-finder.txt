@@ -1,7 +1,7 @@
 Xpath finder
 ------------
 
-.. image:: image/xpathfinder.png
+.. image:: img/xpathfinder.png
 
 **How to turn on Xpath finder?**
 
@@ -41,7 +41,7 @@ After you've customized your new xpath, you might want to click the "ping" butto
 
 Let's say we'd like to get the xpath of the Maps link on Google home page.
 
-.. image:: image/xpathfinder1.png
+.. image:: img/xpathfinder1.png
 
 When we move the cursor on top of the Maps link, we would see something like the above image, and by default, we get the xpath: //A[@id="gb_8"]/SPAN[2]
 

@@ -45,7 +45,7 @@ A: Use cases:
 - A lead who wants to monitor his project.
 	- From the backend server, the results of each run should be displayed, which could be used to monitor the project.
 
-.. image:: image/trends.png
+.. image:: img/trends.png
 
 
 
