@@ -10,3 +10,7 @@ RITE- RobusTest Integrated Testing Environment
    basics
    undercovers
    advanced
+   Xpath-finder
+   Useful-tips
+   Examples
+   QnA

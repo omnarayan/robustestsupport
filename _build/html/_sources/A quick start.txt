@@ -46,7 +46,7 @@ In the RPF editor, we will see the following scripts generated:
 
 `click(getElem("click-input-2-497"));`
 
-`click(getElem("click-input-950"));` 
+`click(getElem("click-input-950"));`
 
 `select(getElem("select-select-GoogleChromeAndroid-367"), ContentMap["SELECT0-488"]);`
 
@@ -72,7 +72,7 @@ Once we click the play button in the dialog, we'll see RPF automatically opens a
 
 **5.Save it to cloud**
 
-Let's close the playback runtime dialog, type in the project and script name, and hit the save button in menu bar. If it's successful, the script should have been saved to the server. 
+Let's close the playback runtime dialog, type in the project and script name, and hit the save button in menu bar. If it's successful, the script should have been saved to the server.
 
 **6.Load it back**
 

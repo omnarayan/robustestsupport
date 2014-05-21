@@ -1,8 +1,3 @@
-.. _advanced:
-
-
- 
-
 Advanced
 ------------------
 
@@ -21,12 +16,12 @@ Advanced
 
 .. _Runs and results: server-pages.html
 
-.. _Webdriver: webdriver.html         
+.. _Webdriver: webdriver.html
 
 
 
 	    **Comments**
-		
+
 	       You do not have permission to add comments.
 
 

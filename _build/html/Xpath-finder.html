@@ -7,7 +7,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>1.4.6. Xpath finder &mdash; RobusTest Support v2 documentation</title>
+    <title>5. Xpath finder &mdash; RobusTest Support v2 documentation</title>
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript">
@@ -25,8 +25,8 @@
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="top" title="RobusTest Support v2 documentation" href="index.html" />
     <link rel="up" title="1. RITE- RobusTest Integrated Testing Environment" href="RITE.html" />
-    <link rel="next" title="1.4.7. Useful tips" href="Useful-tips.html" />
-    <link rel="prev" title="1.4.5. Webdriver" href="webdriver.html" /> 
+    <link rel="next" title="6. Useful tips" href="Useful-tips.html" />
+    <link rel="prev" title="4. Advanced" href="advanced.html" /> 
   </head>
   <body>
     <div class="related">
@@ -39,10 +39,10 @@
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="Useful-tips.html" title="1.4.7. Useful tips"
+          <a href="Useful-tips.html" title="6. Useful tips"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="webdriver.html" title="1.4.5. Webdriver"
+          <a href="advanced.html" title="4. Advanced"
              accesskey="P">previous</a> |</li>
         <li><a href="index.html">RobusTest Support v2 documentation</a> &raquo;</li>
           <li><a href="RITE.html" accesskey="U">1. RITE- RobusTest Integrated Testing Environment</a> &raquo;</li> 
@@ -55,8 +55,8 @@
           <div class="body">
             
   <div class="section" id="xpath-finder">
-<h1>1.4.6. Xpath finder<a class="headerlink" href="#xpath-finder" title="Permalink to this headline">¶</a></h1>
-<img alt="image/xpathfinder.png" src="image/xpathfinder.png" />
+<h1>5. Xpath finder<a class="headerlink" href="#xpath-finder" title="Permalink to this headline">¶</a></h1>
+<img alt="_images/xpathfinder.png" src="_images/xpathfinder.png" />
 <p><strong>How to turn on Xpath finder?</strong></p>
 <p>The Xpath finder could be either a standalone tool to help find a custom xpath or it could be used along with RITE.</p>
 <ul class="simple">
@@ -80,7 +80,7 @@
 <p>After you&#8217;ve customized your new xpath, you might want to click the &#8220;ping&#8221; button to check if it&#8217;s still matching the correct element. In the end, you could save it, so that RITE will use the new xpath instead of the default xpath when needed. When use the tool in the standalone mode, once your page navigates out, the Xpath finder will be gone, and you could reopen it if needed.</p>
 <p><strong>A real example</strong></p>
 <p>Let&#8217;s say we&#8217;d like to get the xpath of the Maps link on Google home page.</p>
-<img alt="image/xpathfinder1.png" src="image/xpathfinder1.png" />
+<img alt="_images/xpathfinder1.png" src="_images/xpathfinder1.png" />
 <p>When we move the cursor on top of the Maps link, we would see something like the above image, and by default, we get the xpath: //A[&#64;id=&#8221;gb_8&#8221;]/SPAN[2]</p>
 <p>If we think the id in the xpath might be changed a lot more frequently than the text &#8220;Maps&#8221;, then we could press the &#8220;Shift&#8221; key to pause the content changing, and then check the text checkbox before &#8220;Maps&#8221; in Xpath finder. Now, we get another xpath generated: //SPAN[text()=&#8221;Maps&#8221;]</p>
 <p>In some circumstances, there might not be any attributes that are reliable enough, we might just want to generate the xpath based on its location. In this case, we could simply check all of the checkboxes in Xpath finder off. Then we&#8217;ll get another xpath: //DIV[1]/OL[1]/LI[5]/A[1]/SPAN[2]</p>
@@ -110,11 +110,11 @@
               <img class="logo" src="_static/RobusTest.png" alt="Logo"/>
             </a></p>
   <h4>Previous topic</h4>
-  <p class="topless"><a href="webdriver.html"
-                        title="previous chapter">1.4.5. Webdriver</a></p>
+  <p class="topless"><a href="advanced.html"
+                        title="previous chapter">4. Advanced</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="Useful-tips.html"
-                        title="next chapter">1.4.7. Useful tips</a></p>
+                        title="next chapter">6. Useful tips</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
     <li><a href="_sources/Xpath-finder.txt"
@@ -147,10 +147,10 @@
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="Useful-tips.html" title="1.4.7. Useful tips"
+          <a href="Useful-tips.html" title="6. Useful tips"
              >next</a> |</li>
         <li class="right" >
-          <a href="webdriver.html" title="1.4.5. Webdriver"
+          <a href="advanced.html" title="4. Advanced"
              >previous</a> |</li>
         <li><a href="index.html">RobusTest Support v2 documentation</a> &raquo;</li>
           <li><a href="RITE.html" >1. RITE- RobusTest Integrated Testing Environment</a> &raquo;</li> 
